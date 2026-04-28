@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Streamlit secrets — NEVER commit this
+.streamlit/secrets.toml
+
+# Runtime files — clear before deploy
+results_live.csv
+mock_active.flag
+
+# Test/diagnostic scripts (optional — keep if you want them)
+diag.py
+full_state_test.py
+turnout_check.py
+read_docx.py

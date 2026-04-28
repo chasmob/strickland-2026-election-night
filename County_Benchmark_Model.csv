@@ -1,0 +1,161 @@
+County,Strickland % Adjusted,Strickland % Pure Historical,Cowsert % Adjusted,Sensitivity 1.2M Total,Sensitivity 1.2M Strickland,Expected Total Low,Expected Total Mid [PRIMARY],Expected Total High,Sensitivity 1.6M Total,Sensitivity 1.6M Strickland,Expected Strickland Votes Low,Expected Strickland Votes Mid [PRIMARY],Expected Strickland Votes High,Floor %,Ceiling %,Breakout %,Candidate Adjustment,SoS-Gov Divergence pts,Turnout Volatility,Outlier Flag,Source Note
+Appling County,47.8,47.8,52.2,3786,1809,4101,4417,4732,5048,2412,1960,2111,2261,42.8,52.8,55.8,None,2.2,Clean,,SoS_dev=-1.8% | Gov_dev=-4.0% | blended_dev=-2.8% | anchor=50% + dev*0.8 | v2.5
+Atkinson County,44.5,44.5,55.5,975,434,1057,1138,1219,1301,579,470,506,542,36.5,52.5,56.5,None,10.5,High Volatility,,SoS_dev=-2.2% | Gov_dev=-12.6% | blended_dev=-6.9% | anchor=50% + dev*0.8 | v2.5
+Bacon County,45.8,45.8,54.2,2306,1057,2498,2690,2883,3075,1409,1145,1233,1321,37.8,53.8,57.8,None,9.8,High Volatility,,SoS_dev=-0.8% | Gov_dev=-10.6% | blended_dev=-5.2% | anchor=50% + dev*0.8 | v2.5
+Baker County,47.5,47.5,52.5,488,232,529,569,610,651,309,251,270,290,39.5,55.5,59.5,None,4.4,High Volatility,,SoS_dev=-5.1% | Gov_dev=-0.8% | blended_dev=-3.2% | anchor=50% + dev*0.8 | v2.5
+Baldwin County,40.9,40.9,59.1,4840,1980,5244,5647,6050,6454,2640,2145,2310,2475,33.9,47.9,50.9,None,26.6,Watch,,SoS_dev=-23.3% | Gov_dev=3.3% | blended_dev=-11.4% | anchor=50% + dev*0.8 | v2.5
+Banks County,40.2,40.2,59.8,3791,1523,4106,4422,4738,5054,2030,1650,1777,1904,33.2,47.2,50.2,None,8.6,Watch,,SoS_dev=-16.2% | Gov_dev=-7.5% | blended_dev=-12.3% | anchor=50% + dev*0.8 | v2.5
+Barrow County,38.3,40.3,61.7,11514,4411,12473,13433,14392,15352,5881,4778,5146,5513,31.3,45.3,48.3,+2 Cowsert (home-region),25.2,Watch,,SoS_dev=-23.4% | Gov_dev=1.7% | blended_dev=-12.1% | anchor=50% + dev*0.8 | v2.5
+Bartow County,51.5,51.5,48.5,16535,8513,17913,19291,20669,22047,11350,9222,9931,10641,46.5,56.5,59.5,None,0.2,Clean,,SoS_dev=1.8% | Gov_dev=1.9% | blended_dev=1.9% | anchor=50% + dev*0.8 | v2.5
+Ben Hill County,50.2,50.2,49.8,2035,1021,2205,2374,2544,2714,1361,1106,1191,1276,42.2,58.2,62.2,None,10.4,High Volatility,,SoS_dev=4.9% | Gov_dev=-5.5% | blended_dev=0.2% | anchor=50% + dev*0.8 | v2.5
+Berrien County,47.9,47.9,52.1,3286,1572,3560,3833,4107,4381,2096,1704,1834,1965,40.9,54.9,57.9,None,11.5,Watch,,SoS_dev=2.5% | Gov_dev=-9.0% | blended_dev=-2.7% | anchor=50% + dev*0.8 | v2.5
+Bibb County,53.7,53.7,46.3,13088,7032,14179,15270,16360,17451,9376,7618,8204,8790,48.7,58.7,61.7,None,1.6,Clean,,SoS_dev=5.4% | Gov_dev=3.8% | blended_dev=4.7% | anchor=50% + dev*0.8 | v2.5
+Bleckley County,54.9,54.9,45.1,2434,1337,2637,2839,3042,3245,1782,1448,1559,1671,46.9,62.9,66.9,None,5.3,High Volatility,,SoS_dev=8.6% | Gov_dev=3.2% | blended_dev=6.1% | anchor=50% + dev*0.8 | v2.5
+Brantley County,40.7,40.7,59.3,3186,1296,3452,3717,3983,4248,1728,1404,1512,1620,33.7,47.7,50.7,None,8.2,Watch,,SoS_dev=-8.0% | Gov_dev=-16.1% | blended_dev=-11.6% | anchor=50% + dev*0.8 | v2.5
+Brooks County,45.8,45.8,54.2,2016,923,2184,2352,2520,2688,1231,1000,1077,1154,37.8,53.8,57.8,None,11.6,High Volatility,,SoS_dev=-0.1% | Gov_dev=-11.7% | blended_dev=-5.3% | anchor=50% + dev*0.8 | v2.5
+Bryan County,50.7,50.7,49.3,6082,3081,6589,7096,7602,8109,4107,3337,3594,3850,43.7,57.7,60.7,None,5.0,Watch,,SoS_dev=3.0% | Gov_dev=-1.9% | blended_dev=0.8% | anchor=50% + dev*0.8 | v2.5
+Bulloch County,52.8,52.8,47.2,8752,4624,9481,10211,10940,11669,6165,5009,5394,5780,45.8,59.8,62.8,None,5.7,Watch,,SoS_dev=6.1% | Gov_dev=0.4% | blended_dev=3.5% | anchor=50% + dev*0.8 | v2.5
+Burke County,47.9,47.9,52.1,2576,1233,2791,3005,3220,3435,1644,1336,1438,1541,42.9,52.9,55.9,None,1.0,Clean,,SoS_dev=-3.1% | Gov_dev=-2.1% | blended_dev=-2.7% | anchor=50% + dev*0.8 | v2.5
+Butts County,43.2,43.2,56.8,4560,1970,4940,5320,5700,6080,2627,2134,2299,2463,36.2,50.2,53.2,None,15.8,Watch,,SoS_dev=-15.6% | Gov_dev=0.2% | blended_dev=-8.5% | anchor=50% + dev*0.8 | v2.5
+Calhoun County,58.9,58.9,41.1,449,264,486,523,561,598,352,286,308,330,50.9,66.9,70.9,None,8.8,High Volatility,,SoS_dev=15.1% | Gov_dev=6.2% | blended_dev=11.1% | anchor=50% + dev*0.8 | v2.5
+Camden County,46.1,46.1,53.9,7130,3285,7724,8319,8913,9507,4380,3558,3832,4106,39.1,53.1,56.1,None,10.7,Watch,,SoS_dev=-0.1% | Gov_dev=-10.8% | blended_dev=-4.9% | anchor=50% + dev*0.8 | v2.5
+Candler County,49.1,49.1,50.9,1406,690,1523,1640,1758,1875,921,748,805,863,41.1,57.1,61.1,None,2.9,High Volatility,,SoS_dev=-2.4% | Gov_dev=0.5% | blended_dev=-1.1% | anchor=50% + dev*0.8 | v2.5
+Carroll County,53.2,53.2,46.8,18667,9938,20223,21778,23334,24890,13251,10766,11594,12422,46.2,60.2,63.2,None,4.3,Watch,,SoS_dev=6.0% | Gov_dev=1.7% | blended_dev=4.0% | anchor=50% + dev*0.8 | v2.5
+Catoosa County,44.7,44.7,55.3,12935,5780,14013,15091,16169,17247,7707,6261,6743,7225,37.7,51.7,54.7,None,17.4,Watch,,SoS_dev=1.2% | Gov_dev=-16.2% | blended_dev=-6.6% | anchor=50% + dev*0.8 | v2.5
+Charlton County,44.5,44.5,55.5,1548,690,1677,1806,1934,2063,919,747,804,862,36.5,52.5,56.5,None,16.9,High Volatility,,SoS_dev=0.8% | Gov_dev=-16.1% | blended_dev=-6.8% | anchor=50% + dev*0.8 | v2.5
+Chatham County,53.1,53.1,46.9,24208,12843,26225,28242,30259,32277,17124,13913,14983,16053,48.1,58.1,61.1,None,2.9,Clean,,SoS_dev=5.1% | Gov_dev=2.2% | blended_dev=3.8% | anchor=50% + dev*0.8 | v2.5
+Chattahoochee County,42.5,42.5,57.5,358,152,388,418,448,478,203,165,178,190,34.5,50.5,54.5,None,24.1,High Volatility,,SoS_dev=1.5% | Gov_dev=-22.6% | blended_dev=-9.4% | anchor=50% + dev*0.8 | v2.5
+Chattooga County,48.8,48.8,51.2,3920,1912,4246,4573,4899,5226,2548,2070,2230,2389,41.8,55.8,58.8,None,7.0,Watch,,SoS_dev=1.6% | Gov_dev=-5.4% | blended_dev=-1.5% | anchor=50% + dev*0.8 | v2.5
+Cherokee County,53.0,53.0,47.0,52544,27858,56923,61301,65680,70059,37144,30180,32501,34823,48.0,58.0,61.0,None,1.0,Clean,,SoS_dev=4.2% | Gov_dev=3.2% | blended_dev=3.8% | anchor=50% + dev*0.8 | v2.5
+Clarke County,50.7,52.7,49.3,8443,4280,9146,9850,10553,11257,5707,4636,4993,5350,43.7,57.7,60.7,+2 Cowsert (home-region),10.6,Watch,,SoS_dev=-1.4% | Gov_dev=9.2% | blended_dev=3.4% | anchor=50% + dev*0.8 | v2.5
+Clay County,52.3,52.3,47.7,334,175,362,390,418,446,233,189,204,218,44.3,60.3,64.3,None,5.8,High Volatility,,SoS_dev=5.4% | Gov_dev=-0.4% | blended_dev=2.8% | anchor=50% + dev*0.8 | v2.5
+Clayton County,53.5,53.5,46.5,5236,2800,5672,6108,6545,6981,3734,3033,3267,3500,48.5,58.5,61.5,None,2.8,Clean,,SoS_dev=5.6% | Gov_dev=2.8% | blended_dev=4.4% | anchor=50% + dev*0.8 | v2.5
+Clinch County,50.2,50.2,49.8,872,438,945,1017,1090,1163,584,475,511,548,42.2,58.2,62.2,None,12.4,High Volatility,,SoS_dev=5.9% | Gov_dev=-6.5% | blended_dev=0.3% | anchor=50% + dev*0.8 | v2.5
+Cobb County,56.4,56.4,43.6,89150,50292,96580,104009,111438,118867,67057,54484,58675,62866,49.4,63.4,66.4,None,3.1,Watch,,SoS_dev=9.4% | Gov_dev=6.3% | blended_dev=8.0% | anchor=50% + dev*0.8 | v2.5
+Coffee County,45.6,45.6,54.4,4230,1931,4582,4935,5287,5640,2574,2092,2253,2413,38.6,52.6,55.6,None,13.8,Watch,,SoS_dev=0.8% | Gov_dev=-13.0% | blended_dev=-5.4% | anchor=50% + dev*0.8 | v2.5
+Colquitt County,49.8,49.8,50.2,5941,2956,6437,6932,7427,7922,3941,3202,3449,3695,42.8,56.8,59.8,None,3.3,Watch,,SoS_dev=1.2% | Gov_dev=-2.1% | blended_dev=-0.3% | anchor=50% + dev*0.8 | v2.5
+Columbia County,42.8,42.8,57.2,25040,10708,27126,29213,31300,33386,14277,11600,12492,13385,35.8,49.8,52.8,None,11.2,Watch,,SoS_dev=-14.1% | Gov_dev=-2.9% | blended_dev=-9.0% | anchor=50% + dev*0.8 | v2.5
+Cook County,48.4,48.4,51.6,2440,1181,2643,2846,3049,3253,1575,1279,1378,1476,40.4,56.4,60.4,None,9.4,High Volatility,,SoS_dev=2.2% | Gov_dev=-7.2% | blended_dev=-2.0% | anchor=50% + dev*0.8 | v2.5
+Coweta County,53.7,53.7,46.3,25100,13475,27192,29283,31375,33467,17967,14598,15721,16844,46.7,60.7,63.7,None,3.8,Watch,,SoS_dev=6.3% | Gov_dev=2.5% | blended_dev=4.6% | anchor=50% + dev*0.8 | v2.5
+Crawford County,45.7,45.7,54.3,2148,982,2327,2506,2685,2864,1309,1064,1145,1227,37.7,53.7,57.7,None,0.3,High Volatility,,SoS_dev=-5.5% | Gov_dev=-5.2% | blended_dev=-5.4% | anchor=50% + dev*0.8 | v2.5
+Crisp County,53.4,53.4,46.6,2658,1420,2879,3101,3322,3544,1893,1538,1657,1775,46.4,60.4,63.4,None,9.2,Watch,,SoS_dev=8.4% | Gov_dev=-0.8% | blended_dev=4.3% | anchor=50% + dev*0.8 | v2.5
+Dade County,42.3,42.3,57.7,3239,1369,3508,3778,4048,4318,1825,1482,1596,1711,35.3,49.3,52.3,None,20.3,Watch,,SoS_dev=-0.6% | Gov_dev=-20.8% | blended_dev=-9.7% | anchor=50% + dev*0.8 | v2.5
+Dawson County,48.2,48.2,51.8,6857,3307,7429,8000,8572,9143,4409,3582,3858,4134,43.2,53.2,56.2,None,1.8,Clean,,SoS_dev=-3.0% | Gov_dev=-1.2% | blended_dev=-2.2% | anchor=50% + dev*0.8 | v2.5
+DeKalb County,59.3,59.3,40.7,28813,17083,31214,33616,36017,38418,22777,18506,19930,21354,52.3,66.3,69.3,None,7.2,Watch,,SoS_dev=14.8% | Gov_dev=7.7% | blended_dev=11.6% | anchor=50% + dev*0.8 | v2.5
+Decatur County,49.2,49.2,50.8,3059,1504,3314,3569,3824,4079,2005,1629,1754,1880,42.2,56.2,59.2,None,8.0,Watch,,SoS_dev=2.5% | Gov_dev=-5.4% | blended_dev=-1.1% | anchor=50% + dev*0.8 | v2.5
+Dodge County,52.1,52.1,47.9,3352,1747,3632,3911,4190,4470,2330,1893,2039,2184,45.1,59.1,62.1,None,6.4,Watch,,SoS_dev=5.6% | Gov_dev=-0.9% | blended_dev=2.7% | anchor=50% + dev*0.8 | v2.5
+Dooly County,50.3,50.3,49.7,1148,577,1243,1339,1435,1530,769,625,673,722,42.3,58.3,62.3,None,4.5,High Volatility,,SoS_dev=2.4% | Gov_dev=-2.1% | blended_dev=0.3% | anchor=50% + dev*0.8 | v2.5
+Dougherty County,52.9,52.9,47.1,4256,2250,4611,4965,5320,5674,2999,2437,2625,2812,45.9,59.9,62.9,None,5.6,Watch,,SoS_dev=6.1% | Gov_dev=0.5% | blended_dev=3.6% | anchor=50% + dev*0.8 | v2.5
+Douglas County,53.6,53.6,46.4,11074,5940,11997,12920,13843,14765,7920,6435,6930,7425,48.6,58.6,61.6,None,1.5,Clean,,SoS_dev=5.2% | Gov_dev=3.7% | blended_dev=4.6% | anchor=50% + dev*0.8 | v2.5
+Early County,50.0,50.0,50.0,1448,724,1568,1689,1809,1930,965,784,844,904,42.0,58.0,62.0,None,7.8,High Volatility,,SoS_dev=-3.5% | Gov_dev=4.3% | blended_dev=-0.0% | anchor=50% + dev*0.8 | v2.5
+Echols County,43.4,43.4,56.6,618,269,669,721,772,824,358,291,313,335,35.4,51.4,55.4,None,7.9,High Volatility,,SoS_dev=-4.7% | Gov_dev=-12.5% | blended_dev=-8.2% | anchor=50% + dev*0.8 | v2.5
+Effingham County,49.2,49.2,50.8,9689,4763,10497,11304,12112,12919,6350,5160,5556,5954,42.2,56.2,59.2,None,4.4,Watch,,SoS_dev=0.9% | Gov_dev=-3.5% | blended_dev=-1.1% | anchor=50% + dev*0.8 | v2.5
+Elbert County,42.1,42.1,57.9,3362,1416,3642,3922,4202,4482,1888,1534,1652,1770,35.1,49.1,52.1,None,4.9,Watch,,SoS_dev=-7.6% | Gov_dev=-12.5% | blended_dev=-9.8% | anchor=50% + dev*0.8 | v2.5
+Emanuel County,49.4,49.4,50.6,3400,1678,3683,3967,4250,4533,2237,1818,1958,2098,42.4,56.4,59.4,None,5.8,Watch,,SoS_dev=1.8% | Gov_dev=-4.0% | blended_dev=-0.8% | anchor=50% + dev*0.8 | v2.5
+Evans County,54.2,54.2,45.8,1431,776,1550,1669,1789,1908,1034,840,905,970,46.2,62.2,66.2,None,3.1,High Volatility,,SoS_dev=6.6% | Gov_dev=3.6% | blended_dev=5.3% | anchor=50% + dev*0.8 | v2.5
+Fannin County,43.3,43.3,56.7,6685,2895,7242,7800,8357,8914,3861,3136,3378,3619,36.3,50.3,53.3,None,6.8,Watch,,SoS_dev=-5.3% | Gov_dev=-12.1% | blended_dev=-8.4% | anchor=50% + dev*0.8 | v2.5
+Fayette County,53.1,53.1,46.9,20720,10996,22446,24173,25899,27626,14662,11912,12829,13745,48.1,58.1,61.1,None,1.5,Clean,,SoS_dev=4.5% | Gov_dev=3.0% | blended_dev=3.8% | anchor=50% + dev*0.8 | v2.5
+Floyd County,52.8,52.8,47.2,14382,7600,15581,16779,17978,19177,10134,8233,8866,9500,45.8,59.8,62.8,None,4.7,Watch,,SoS_dev=5.7% | Gov_dev=1.0% | blended_dev=3.6% | anchor=50% + dev*0.8 | v2.5
+Forsyth County,49.8,49.8,50.2,40372,20125,43736,47101,50465,53829,26833,21801,23479,25156,44.8,54.8,57.8,None,2.4,Clean,,SoS_dev=-1.3% | Gov_dev=1.1% | blended_dev=-0.2% | anchor=50% + dev*0.8 | v2.5
+Franklin County,40.4,40.4,59.6,4890,1973,5298,5705,6113,6520,2631,2138,2302,2467,35.4,45.4,48.4,None,0.2,Clean,,SoS_dev=-12.1% | Gov_dev=-12.0% | blended_dev=-12.1% | anchor=50% + dev*0.8 | v2.5
+Fulton County,56.8,56.8,43.2,64777,36764,70175,75573,80971,86369,49018,39827,42891,45954,49.8,63.8,66.8,None,4.8,Watch,,SoS_dev=10.6% | Gov_dev=5.8% | blended_dev=8.4% | anchor=50% + dev*0.8 | v2.5
+Gilmer County,44.7,44.7,55.3,8177,3653,8859,9540,10222,10903,4870,3957,4262,4566,37.7,51.7,54.7,None,3.9,Watch,,SoS_dev=-8.4% | Gov_dev=-4.5% | blended_dev=-6.7% | anchor=50% + dev*0.8 | v2.5
+Glascock County,31.1,31.1,68.9,836,260,906,975,1045,1115,346,281,303,325,23.1,39.1,43.1,None,20.2,High Volatility,,SoS_dev=-32.7% | Gov_dev=-12.6% | blended_dev=-23.7% | anchor=50% + dev*0.8 | v2.5
+Glynn County,46.4,46.4,53.6,13059,6064,14147,15235,16323,17411,8084,6569,7074,7579,39.4,53.4,56.4,None,3.7,Watch,,SoS_dev=-2.8% | Gov_dev=-6.5% | blended_dev=-4.5% | anchor=50% + dev*0.8 | v2.5
+Gordon County,49.9,49.9,50.1,9399,4694,10182,10965,11748,12531,6258,5085,5476,5867,42.9,56.9,59.9,None,3.5,Watch,,SoS_dev=1.5% | Gov_dev=-2.0% | blended_dev=-0.1% | anchor=50% + dev*0.8 | v2.5
+Grady County,47.1,47.1,52.9,3345,1577,3624,3903,4181,4460,2103,1709,1840,1971,40.1,54.1,57.1,None,15.2,Watch,,SoS_dev=3.3% | Gov_dev=-11.9% | blended_dev=-3.6% | anchor=50% + dev*0.8 | v2.5
+Greene County,40.3,40.3,59.7,4741,1910,5137,5532,5927,6322,2547,2070,2229,2388,33.3,47.3,50.3,None,28.6,Watch,,SoS_dev=-25.0% | Gov_dev=3.6% | blended_dev=-12.1% | anchor=50% + dev*0.8 | v2.5
+Gwinnett County,51.1,51.1,48.9,66828,34125,72397,77966,83535,89104,45500,36969,39813,42656,44.1,58.1,61.1,None,4.5,Watch,,SoS_dev=-0.7% | Gov_dev=3.8% | blended_dev=1.3% | anchor=50% + dev*0.8 | v2.5
+Habersham County,45.8,45.8,54.2,9360,4288,10140,10920,11700,12480,5717,4645,5002,5359,38.8,52.8,55.8,None,8.0,Watch,,SoS_dev=-8.8% | Gov_dev=-0.9% | blended_dev=-5.2% | anchor=50% + dev*0.8 | v2.5
+Hall County,50.2,50.2,49.8,33234,16695,36003,38773,41542,44312,22260,18086,19477,20868,43.2,57.2,60.2,None,3.4,Watch,,SoS_dev=-1.2% | Gov_dev=2.2% | blended_dev=0.3% | anchor=50% + dev*0.8 | v2.5
+Hancock County,37.9,37.9,62.1,579,220,627,675,723,772,293,238,256,274,29.9,45.9,49.9,None,20.0,High Volatility,,SoS_dev=-24.1% | Gov_dev=-4.1% | blended_dev=-15.1% | anchor=50% + dev*0.8 | v2.5
+Haralson County,52.2,52.2,47.8,6130,3198,6641,7152,7663,8174,4264,3464,3731,3997,45.2,59.2,62.2,None,3.3,Watch,,SoS_dev=4.2% | Gov_dev=0.9% | blended_dev=2.7% | anchor=50% + dev*0.8 | v2.5
+Harris County,46.0,46.0,54.0,6739,3103,7301,7862,8424,8985,4137,3362,3620,3879,39.0,53.0,56.0,None,13.9,Watch,,SoS_dev=1.3% | Gov_dev=-12.6% | blended_dev=-4.9% | anchor=50% + dev*0.8 | v2.5
+Hart County,42.3,42.3,57.7,5230,2210,5665,6101,6537,6973,2947,2394,2579,2763,35.3,49.3,52.3,None,5.2,Watch,,SoS_dev=-7.3% | Gov_dev=-12.5% | blended_dev=-9.7% | anchor=50% + dev*0.8 | v2.5
+Heard County,52.7,52.7,47.3,2394,1262,2594,2793,2993,3193,1683,1367,1472,1577,44.7,60.7,64.7,None,11.6,High Volatility,,SoS_dev=8.6% | Gov_dev=-3.0% | blended_dev=3.4% | anchor=50% + dev*0.8 | v2.5
+Henry County,53.8,49.8,46.2,19716,10598,21359,23002,24646,26289,14131,11481,12364,13248,46.8,60.8,63.8,+4 Strickland (home-region),6.3,Watch,,SoS_dev=-3.2% | Gov_dev=3.2% | blended_dev=-0.3% | anchor=50% + dev*0.8 | v2.5
+Houston County,47.1,47.1,52.9,18159,8551,19672,21186,22699,24212,11401,9263,9976,10689,40.1,54.1,57.1,None,6.2,Watch,,SoS_dev=-0.8% | Gov_dev=-7.1% | blended_dev=-3.6% | anchor=50% + dev*0.8 | v2.5
+Irwin County,52.0,52.0,48.0,1682,874,1822,1963,2103,2243,1165,947,1020,1093,44.0,60.0,64.0,None,17.3,High Volatility,,SoS_dev=10.2% | Gov_dev=-7.1% | blended_dev=2.5% | anchor=50% + dev*0.8 | v2.5
+Jackson County,45.3,45.3,54.7,14143,6408,15322,16500,17679,18857,8544,6943,7476,8011,38.3,52.3,55.3,None,12.1,Watch,,SoS_dev=-11.3% | Gov_dev=0.8% | blended_dev=-5.9% | anchor=50% + dev*0.8 | v2.5
+Jasper County,39.7,39.7,60.3,3223,1278,3492,3760,4029,4298,1704,1385,1491,1598,32.7,46.7,49.7,None,13.0,Watch,,SoS_dev=-18.8% | Gov_dev=-5.8% | blended_dev=-12.9% | anchor=50% + dev*0.8 | v2.5
+Jeff Davis County,45.9,45.9,54.1,2142,984,2321,2499,2678,2856,1311,1066,1148,1230,37.9,53.9,57.9,None,5.8,High Volatility,,SoS_dev=-2.5% | Gov_dev=-8.3% | blended_dev=-5.1% | anchor=50% + dev*0.8 | v2.5
+Jefferson County,36.8,36.8,63.2,1917,706,2077,2237,2396,2556,942,765,824,883,28.8,44.8,48.8,None,24.7,High Volatility,,SoS_dev=-27.6% | Gov_dev=-2.9% | blended_dev=-16.4% | anchor=50% + dev*0.8 | v2.5
+Jenkins County,47.1,47.1,52.9,1048,494,1135,1222,1310,1397,659,535,576,618,39.1,55.1,59.1,None,4.4,High Volatility,,SoS_dev=-1.6% | Gov_dev=-6.0% | blended_dev=-3.6% | anchor=50% + dev*0.8 | v2.5
+Johnson County,34.6,34.6,65.4,1709,592,1852,1994,2136,2279,789,641,690,740,26.6,42.6,46.6,None,21.8,High Volatility,,SoS_dev=-29.0% | Gov_dev=-7.2% | blended_dev=-19.2% | anchor=50% + dev*0.8 | v2.5
+Jones County,50.0,50.0,50.0,4824,2414,5226,5628,6030,6432,3219,2615,2816,3018,45.0,55.0,58.0,None,0.1,Clean,,SoS_dev=0.1% | Gov_dev=0.0% | blended_dev=0.1% | anchor=50% + dev*0.8 | v2.5
+Lamar County,51.3,51.3,48.7,3328,1706,3606,3883,4161,4438,2275,1848,1990,2133,44.3,58.3,61.3,None,4.3,Watch,,SoS_dev=3.5% | Gov_dev=-0.8% | blended_dev=1.6% | anchor=50% + dev*0.8 | v2.5
+Lanier County,48.6,48.6,51.4,1115,542,1207,1300,1393,1486,722,586,631,677,40.6,56.6,60.6,None,15.5,High Volatility,,SoS_dev=5.2% | Gov_dev=-10.3% | blended_dev=-1.8% | anchor=50% + dev*0.8 | v2.5
+Laurens County,52.4,52.4,47.6,7195,3774,7794,8394,8993,9593,5031,4088,4403,4717,45.4,59.4,62.4,None,4.3,Watch,,SoS_dev=5.0% | Gov_dev=0.7% | blended_dev=3.1% | anchor=50% + dev*0.8 | v2.5
+Lee County,50.3,50.3,49.7,5671,2851,6144,6616,7089,7562,3802,3089,3327,3564,43.3,57.3,60.3,None,7.5,Watch,,SoS_dev=3.7% | Gov_dev=-3.8% | blended_dev=0.4% | anchor=50% + dev*0.8 | v2.5
+Liberty County,52.4,52.4,47.6,2958,1551,3204,3451,3697,3944,2068,1680,1809,1938,45.4,59.4,62.4,None,8.6,Watch,,SoS_dev=6.9% | Gov_dev=-1.7% | blended_dev=3.0% | anchor=50% + dev*0.8 | v2.5
+Lincoln County,35.0,35.0,65.0,1979,692,2144,2309,2473,2638,922,749,807,864,27.0,43.0,47.0,None,22.9,High Volatility,,SoS_dev=-29.1% | Gov_dev=-6.2% | blended_dev=-18.8% | anchor=50% + dev*0.8 | v2.5
+Long County,53.9,53.9,46.1,1532,826,1660,1788,1916,2043,1101,895,964,1033,45.9,61.9,65.9,None,7.5,High Volatility,,SoS_dev=8.3% | Gov_dev=0.7% | blended_dev=4.9% | anchor=50% + dev*0.8 | v2.5
+Lowndes County,44.9,44.9,55.1,10631,4771,11517,12403,13289,14175,6361,5168,5566,5964,37.9,51.9,54.9,None,5.2,Watch,,SoS_dev=-4.1% | Gov_dev=-9.2% | blended_dev=-6.4% | anchor=50% + dev*0.8 | v2.5
+Lumpkin County,48.3,48.3,51.7,6440,3110,6977,7514,8050,8587,4147,3369,3629,3887,43.3,53.3,56.3,None,1.6,Clean,,SoS_dev=-2.8% | Gov_dev=-1.3% | blended_dev=-2.1% | anchor=50% + dev*0.8 | v2.5
+Macon County,47.6,47.6,52.4,839,399,908,978,1048,1118,532,432,466,499,39.6,55.6,59.6,None,6.8,High Volatility,,SoS_dev=0.1% | Gov_dev=-6.7% | blended_dev=-3.0% | anchor=50% + dev*0.8 | v2.5
+Madison County,45.7,45.7,54.3,6234,2849,6753,7272,7792,8311,3799,3087,3324,3561,38.7,52.7,55.7,None,12.2,Watch,,SoS_dev=-10.8% | Gov_dev=1.3% | blended_dev=-5.4% | anchor=50% + dev*0.8 | v2.5
+Marion County,45.9,45.9,54.1,1183,543,1282,1381,1479,1578,725,589,634,679,37.9,53.9,57.9,None,18.5,High Volatility,,SoS_dev=3.2% | Gov_dev=-15.3% | blended_dev=-5.1% | anchor=50% + dev*0.8 | v2.5
+McDuffie County,35.9,35.9,64.1,3224,1158,3492,3761,4030,4298,1543,1254,1351,1447,28.9,42.9,45.9,None,28.4,Watch,,SoS_dev=-30.4% | Gov_dev=-2.0% | blended_dev=-17.6% | anchor=50% + dev*0.8 | v2.5
+McIntosh County,50.5,50.5,49.5,2567,1296,2781,2995,3209,3423,1728,1404,1512,1620,42.5,58.5,62.5,None,7.0,High Volatility,,SoS_dev=3.7% | Gov_dev=-3.3% | blended_dev=0.6% | anchor=50% + dev*0.8 | v2.5
+Meriwether County,51.5,51.5,48.5,3576,1842,3874,4172,4470,4768,2456,1996,2149,2303,44.5,58.5,61.5,None,6.4,Watch,,SoS_dev=4.8% | Gov_dev=-1.6% | blended_dev=1.9% | anchor=50% + dev*0.8 | v2.5
+Miller County,50.3,50.3,49.7,1030,518,1116,1201,1287,1373,690,561,604,647,42.3,58.3,62.3,None,4.8,High Volatility,,SoS_dev=2.5% | Gov_dev=-2.3% | blended_dev=0.3% | anchor=50% + dev*0.8 | v2.5
+Mitchell County,52.2,52.2,47.8,2591,1354,2806,3022,3238,3454,1804,1466,1579,1692,45.2,59.2,62.2,None,5.4,Watch,,SoS_dev=5.2% | Gov_dev=-0.2% | blended_dev=2.8% | anchor=50% + dev*0.8 | v2.5
+Monroe County,50.4,50.4,49.6,6342,3195,6871,7399,7928,8456,4260,3462,3728,3994,45.4,55.4,58.4,None,0.3,Clean,,SoS_dev=0.6% | Gov_dev=0.3% | blended_dev=0.5% | anchor=50% + dev*0.8 | v2.5
+Montgomery County,49.5,49.5,50.5,1583,784,1715,1847,1979,2111,1045,849,914,980,41.5,57.5,61.5,None,3.6,High Volatility,,SoS_dev=1.0% | Gov_dev=-2.6% | blended_dev=-0.6% | anchor=50% + dev*0.8 | v2.5
+Morgan County,37.2,37.2,62.8,5078,1891,5501,5924,6347,6770,2521,2048,2206,2363,30.2,44.2,47.2,None,16.6,Watch,,SoS_dev=-23.4% | Gov_dev=-6.8% | blended_dev=-16.0% | anchor=50% + dev*0.8 | v2.5
+Murray County,42.4,42.4,57.6,6217,2633,6735,7253,7771,8289,3511,2853,3072,3292,35.4,49.4,52.4,None,8.7,Watch,,SoS_dev=-5.7% | Gov_dev=-14.3% | blended_dev=-9.6% | anchor=50% + dev*0.8 | v2.5
+Muscogee County,48.9,48.9,51.1,12821,6267,13889,14958,16026,17094,8356,6789,7312,7834,41.9,55.9,58.9,None,13.8,Watch,,SoS_dev=4.8% | Gov_dev=-9.0% | blended_dev=-1.4% | anchor=50% + dev*0.8 | v2.5
+Newton County,49.5,46.5,50.5,10563,5229,11444,12324,13204,14085,6973,5665,6101,6536,42.5,56.5,59.5,+3 Strickland (home-region),13.4,Watch,,SoS_dev=-10.4% | Gov_dev=3.0% | blended_dev=-4.4% | anchor=50% + dev*0.8 | v2.5
+Oconee County,43.4,47.4,56.6,10120,4397,10963,11806,12650,13493,5862,4763,5129,5496,36.4,50.4,53.4,+4 Cowsert (home-region),22.0,Watch,,SoS_dev=-13.1% | Gov_dev=8.9% | blended_dev=-3.2% | anchor=50% + dev*0.8 | v2.5
+Oglethorpe County,40.9,40.9,59.1,3212,1314,3480,3748,4015,4283,1752,1423,1533,1642,33.9,47.9,50.9,None,27.2,Watch,,SoS_dev=-23.6% | Gov_dev=3.6% | blended_dev=-11.4% | anchor=50% + dev*0.8 | v2.5
+Paulding County,52.0,52.0,48.0,22533,11721,24411,26288,28166,30044,15629,12698,13675,14652,47.0,57.0,60.0,None,0.1,Clean,,SoS_dev=2.6% | Gov_dev=2.5% | blended_dev=2.5% | anchor=50% + dev*0.8 | v2.5
+Peach County,46.1,46.1,53.9,3089,1425,3347,3604,3862,4119,1900,1544,1662,1781,41.1,51.1,54.1,None,2.0,Clean,,SoS_dev=-3.9% | Gov_dev=-5.9% | blended_dev=-4.8% | anchor=50% + dev*0.8 | v2.5
+Pickens County,50.2,50.2,49.8,8056,4047,8727,9399,10070,10741,5396,4384,4722,5059,45.2,55.2,58.2,None,0.4,Clean,,SoS_dev=0.1% | Gov_dev=0.5% | blended_dev=0.3% | anchor=50% + dev*0.8 | v2.5
+Pierce County,44.4,44.4,55.6,3930,1744,4257,4585,4912,5240,2325,1889,2035,2180,37.4,51.4,54.4,None,10.7,Watch,,SoS_dev=-2.2% | Gov_dev=-12.9% | blended_dev=-7.0% | anchor=50% + dev*0.8 | v2.5
+Pike County,51.5,51.5,48.5,4853,2500,5257,5661,6066,6470,3333,2708,2916,3125,44.5,58.5,61.5,None,5.4,Watch,,SoS_dev=4.3% | Gov_dev=-1.1% | blended_dev=1.9% | anchor=50% + dev*0.8 | v2.5
+Polk County,52.2,52.2,47.8,7094,3704,7685,8276,8867,9458,4938,4012,4321,4629,45.2,59.2,62.2,None,5.4,Watch,,SoS_dev=5.2% | Gov_dev=-0.2% | blended_dev=2.8% | anchor=50% + dev*0.8 | v2.5
+Pulaski County,50.9,50.9,49.1,1477,752,1600,1723,1846,1969,1003,815,878,940,42.9,58.9,62.9,None,12.3,High Volatility,,SoS_dev=6.7% | Gov_dev=-5.6% | blended_dev=1.2% | anchor=50% + dev*0.8 | v2.5
+Putnam County,39.8,39.8,60.2,4603,1833,4986,5370,5753,6137,2443,1985,2138,2290,32.8,46.8,49.8,None,24.7,Watch,,SoS_dev=-23.9% | Gov_dev=0.9% | blended_dev=-12.7% | anchor=50% + dev*0.8 | v2.5
+Quitman County,49.1,49.1,50.9,325,160,353,380,407,434,213,173,187,200,41.1,57.1,61.1,None,11.4,High Volatility,,SoS_dev=4.0% | Gov_dev=-7.4% | blended_dev=-1.1% | anchor=50% + dev*0.8 | v2.5
+Rabun County,45.9,45.9,54.1,4405,2024,4772,5139,5506,5873,2699,2193,2361,2530,40.9,50.9,53.9,None,1.9,Clean,,SoS_dev=-5.9% | Gov_dev=-4.0% | blended_dev=-5.1% | anchor=50% + dev*0.8 | v2.5
+Randolph County,53.2,53.2,46.8,729,388,790,851,911,972,517,421,453,485,45.2,61.2,65.2,None,10.5,High Volatility,,SoS_dev=8.8% | Gov_dev=-1.7% | blended_dev=4.0% | anchor=50% + dev*0.8 | v2.5
+Richmond County,47.6,47.6,52.4,12109,5767,13118,14127,15136,16146,7690,6248,6728,7209,40.6,54.6,57.6,None,7.1,Watch,,SoS_dev=-6.2% | Gov_dev=1.0% | blended_dev=-3.0% | anchor=50% + dev*0.8 | v2.5
+Rockdale County,53.9,53.9,46.1,6003,3234,6503,7004,7504,8004,4312,3503,3773,4043,48.9,58.9,61.9,None,0.2,Clean,,SoS_dev=4.9% | Gov_dev=4.7% | blended_dev=4.8% | anchor=50% + dev*0.8 | v2.5
+Schley County,49.0,49.0,51.0,961,471,1041,1121,1201,1281,627,510,549,588,41.0,57.0,61.0,None,10.6,High Volatility,,SoS_dev=3.5% | Gov_dev=-7.1% | blended_dev=-1.3% | anchor=50% + dev*0.8 | v2.5
+Screven County,53.4,53.4,46.6,2047,1092,2217,2388,2558,2729,1456,1183,1274,1365,45.4,61.4,65.4,None,8.2,High Volatility,,SoS_dev=7.9% | Gov_dev=-0.3% | blended_dev=4.2% | anchor=50% + dev*0.8 | v2.5
+Seminole County,50.1,50.1,49.9,1360,681,1474,1587,1700,1814,908,738,794,851,42.1,58.1,62.1,None,5.7,High Volatility,,SoS_dev=2.6% | Gov_dev=-3.1% | blended_dev=0.1% | anchor=50% + dev*0.8 | v2.5
+Spalding County,54.1,54.1,45.9,9477,5129,10267,11057,11846,12636,6839,5557,5984,6411,47.1,61.1,64.1,None,5.0,Watch,,SoS_dev=7.4% | Gov_dev=2.4% | blended_dev=5.2% | anchor=50% + dev*0.8 | v2.5
+Stephens County,41.4,41.4,58.6,4766,1973,5163,5560,5957,6355,2631,2138,2302,2466,36.4,46.4,49.4,None,1.2,Clean,,SoS_dev=-11.3% | Gov_dev=-10.1% | blended_dev=-10.7% | anchor=50% + dev*0.8 | v2.5
+Stewart County,43.4,43.4,56.6,361,157,391,421,451,481,209,170,183,196,35.4,51.4,55.4,None,14.5,High Volatility,,SoS_dev=-1.8% | Gov_dev=-16.3% | blended_dev=-8.3% | anchor=50% + dev*0.8 | v2.5
+Sumter County,49.9,49.9,50.1,2884,1438,3125,3365,3605,3846,1917,1558,1678,1797,42.9,56.9,59.9,None,8.8,Watch,,SoS_dev=3.8% | Gov_dev=-5.0% | blended_dev=-0.2% | anchor=50% + dev*0.8 | v2.5
+Talbot County,43.6,43.6,56.4,714,311,774,833,893,952,415,338,363,390,35.6,51.6,55.6,None,14.2,High Volatility,,SoS_dev=-1.6% | Gov_dev=-15.8% | blended_dev=-8.0% | anchor=50% + dev*0.8 | v2.5
+Taliaferro County,32.1,32.1,67.9,216,69,234,252,271,289,93,75,81,87,24.1,40.1,44.1,None,31.0,High Volatility,,SoS_dev=-36.3% | Gov_dev=-5.3% | blended_dev=-22.4% | anchor=50% + dev*0.8 | v2.5
+Tattnall County,55.2,55.2,44.8,3009,1661,3260,3511,3761,4012,2215,1800,1938,2076,48.2,62.2,65.2,None,4.3,Watch,,SoS_dev=8.4% | Gov_dev=4.1% | blended_dev=6.5% | anchor=50% + dev*0.8 | v2.5
+Taylor County,41.3,41.3,58.7,1223,505,1325,1427,1529,1631,673,547,589,631,33.3,49.3,53.3,None,5.8,High Volatility,,SoS_dev=-13.5% | Gov_dev=-7.8% | blended_dev=-10.9% | anchor=50% + dev*0.8 | v2.5
+Telfair County,51.8,51.8,48.2,1464,758,1586,1708,1830,1952,1011,821,884,947,43.8,59.8,63.8,None,6.0,High Volatility,,SoS_dev=4.9% | Gov_dev=-1.1% | blended_dev=2.2% | anchor=50% + dev*0.8 | v2.5
+Terrell County,49.9,49.9,50.1,1109,553,1201,1293,1386,1478,737,599,645,691,41.9,57.9,61.9,None,9.4,High Volatility,,SoS_dev=4.1% | Gov_dev=-5.3% | blended_dev=-0.2% | anchor=50% + dev*0.8 | v2.5
+Thomas County,46.7,46.7,53.3,6496,3036,7038,7579,8121,8662,4049,3290,3543,3796,39.7,53.7,56.7,None,9.7,Watch,,SoS_dev=0.3% | Gov_dev=-9.4% | blended_dev=-4.1% | anchor=50% + dev*0.8 | v2.5
+Tift County,51.6,51.6,48.4,5116,2640,5543,5969,6395,6822,3521,2861,3081,3300,44.6,58.6,61.6,None,6.6,Watch,,SoS_dev=5.0% | Gov_dev=-1.6% | blended_dev=2.0% | anchor=50% + dev*0.8 | v2.5
+Toombs County,52.2,52.2,47.8,3448,1799,3735,4022,4310,4597,2398,1948,2098,2248,47.2,57.2,60.2,None,1.4,Clean,,SoS_dev=3.3% | Gov_dev=1.9% | blended_dev=2.7% | anchor=50% + dev*0.8 | v2.5
+Towns County,43.7,43.7,56.3,3844,1678,4164,4484,4805,5125,2237,1818,1958,2098,38.7,48.7,51.7,None,1.9,Clean,,SoS_dev=-7.1% | Gov_dev=-9.0% | blended_dev=-7.9% | anchor=50% + dev*0.8 | v2.5
+Treutlen County,49.5,49.5,50.5,1038,514,1124,1211,1297,1384,685,556,599,642,41.5,57.5,61.5,None,4.3,High Volatility,,SoS_dev=-2.6% | Gov_dev=1.7% | blended_dev=-0.6% | anchor=50% + dev*0.8 | v2.5
+Troup County,52.3,52.3,47.7,8297,4339,8988,9680,10371,11063,5785,4700,5062,5423,45.3,59.3,62.3,None,9.7,Watch,,SoS_dev=7.2% | Gov_dev=-2.4% | blended_dev=2.9% | anchor=50% + dev*0.8 | v2.5
+Turner County,50.0,50.0,50.0,1263,632,1369,1474,1579,1685,843,685,737,790,42.0,58.0,62.0,None,9.8,High Volatility,,SoS_dev=4.4% | Gov_dev=-5.4% | blended_dev=0.0% | anchor=50% + dev*0.8 | v2.5
+Twiggs County,47.4,47.4,52.6,1209,574,1309,1410,1511,1612,765,621,669,717,39.4,55.4,59.4,None,4.7,High Volatility,,SoS_dev=-1.1% | Gov_dev=-5.8% | blended_dev=-3.2% | anchor=50% + dev*0.8 | v2.5
+Union County,45.9,45.9,54.1,8486,3896,9193,9900,10608,11315,5195,4221,4545,4870,38.9,52.9,55.9,None,3.8,Watch,,SoS_dev=-3.4% | Gov_dev=-7.2% | blended_dev=-5.1% | anchor=50% + dev*0.8 | v2.5
+Upson County,53.2,53.2,46.8,4408,2343,4775,5143,5510,5877,3124,2539,2734,2929,46.2,60.2,63.2,None,9.0,Watch,,SoS_dev=8.0% | Gov_dev=-1.0% | blended_dev=4.0% | anchor=50% + dev*0.8 | v2.5
+Walker County,41.8,41.8,58.2,10308,4307,11167,12026,12885,13744,5743,4666,5025,5384,34.8,48.8,51.8,None,7.9,Watch,,SoS_dev=-6.7% | Gov_dev=-14.6% | blended_dev=-10.3% | anchor=50% + dev*0.8 | v2.5
+Walton County,40.1,40.1,59.9,19231,7715,20834,22437,24039,25642,10286,8358,9001,9643,33.1,47.1,50.1,None,28.2,Watch,,SoS_dev=-25.0% | Gov_dev=3.2% | blended_dev=-12.4% | anchor=50% + dev*0.8 | v2.5
+Ware County,45.2,45.2,54.8,4584,2073,4966,5348,5730,6112,2764,2245,2418,2591,38.2,52.2,55.2,None,16.2,Watch,,SoS_dev=1.3% | Gov_dev=-14.9% | blended_dev=-6.0% | anchor=50% + dev*0.8 | v2.5
+Warren County,34.2,34.2,65.8,670,229,726,782,837,893,305,248,267,286,26.2,42.2,46.2,None,30.0,High Volatility,,SoS_dev=-33.3% | Gov_dev=-3.3% | blended_dev=-19.8% | anchor=50% + dev*0.8 | v2.5
+Washington County,37.8,37.8,62.2,1918,724,2078,2238,2397,2557,965,784,845,905,29.8,45.8,49.8,None,27.4,High Volatility,,SoS_dev=-27.6% | Gov_dev=-0.3% | blended_dev=-15.3% | anchor=50% + dev*0.8 | v2.5
+Wayne County,51.0,51.0,49.0,5435,2771,5888,6341,6794,7247,3695,3002,3233,3464,44.0,58.0,61.0,None,4.9,Watch,,SoS_dev=3.4% | Gov_dev=-1.5% | blended_dev=1.2% | anchor=50% + dev*0.8 | v2.5
+Webster County,46.0,46.0,54.0,424,195,460,495,530,566,260,212,228,244,38.0,54.0,58.0,None,11.5,High Volatility,,SoS_dev=0.2% | Gov_dev=-11.3% | blended_dev=-5.0% | anchor=50% + dev*0.8 | v2.5
+Wheeler County,46.6,46.6,53.4,772,360,836,900,965,1029,480,390,419,450,38.6,54.6,58.6,None,2.2,High Volatility,,SoS_dev=-3.3% | Gov_dev=-5.5% | blended_dev=-4.2% | anchor=50% + dev*0.8 | v2.5
+White County,49.0,49.0,51.0,6976,3418,7557,8139,8720,9301,4557,3703,3988,4273,44.0,54.0,57.0,None,2.6,Clean,,SoS_dev=-2.4% | Gov_dev=0.2% | blended_dev=-1.3% | anchor=50% + dev*0.8 | v2.5
+Whitfield County,44.1,44.1,55.9,11972,5282,12970,13967,14965,15963,7043,5722,6162,6603,37.1,51.1,54.1,None,8.6,Watch,,SoS_dev=-3.5% | Gov_dev=-12.1% | blended_dev=-7.3% | anchor=50% + dev*0.8 | v2.5
+Wilcox County,47.7,47.7,52.3,1263,602,1369,1474,1579,1685,803,653,703,753,39.7,55.7,59.7,None,11.3,High Volatility,,SoS_dev=2.2% | Gov_dev=-9.1% | blended_dev=-2.9% | anchor=50% + dev*0.8 | v2.5
+Wilkes County,32.5,32.5,67.5,1497,487,1621,1746,1871,1996,650,528,568,609,24.5,40.5,44.5,None,29.4,High Volatility,,SoS_dev=-35.0% | Gov_dev=-5.6% | blended_dev=-21.8% | anchor=50% + dev*0.8 | v2.5
+Wilkinson County,49.0,49.0,51.0,1878,921,2035,2191,2348,2504,1227,998,1074,1151,41.0,57.0,61.0,None,1.7,High Volatility,,SoS_dev=-0.4% | Gov_dev=-2.2% | blended_dev=-1.2% | anchor=50% + dev*0.8 | v2.5
+Worth County,49.1,49.1,50.9,3447,1692,3734,4021,4309,4596,2256,1833,1974,2115,42.1,56.1,59.1,None,7.9,Watch,,SoS_dev=2.4% | Gov_dev=-5.5% | blended_dev=-1.1% | anchor=50% + dev*0.8 | v2.5
+STATEWIDE AGGREGATE,50.0,50.0,50.0,1199999,599828,1300000,1399995,1499994,1600004,799757,649802,699786,749773,,,,See individual county rows,,PASS (50.0% within 46-54% band),,Model v2.5 | Deviation-from-mean | Anchor=50% | GeographicFactor=0.8 | SoS 55% / Gov 45% | Turnout 70/30 | 1.4M mid
