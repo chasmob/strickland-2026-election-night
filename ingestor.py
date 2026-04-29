@@ -111,16 +111,20 @@ def _parse_sos_json(data: dict) -> pd.DataFrame | None:
     return pd.DataFrame(rows)
 
 
-def _fetch_live() -> tuple[pd.DataFrame | None, str]:
-    """Hit the SOS CDN endpoint and parse results."""
+def _fetch_live(sos_url_override: str = '') -> tuple:
+    """Hit the SOS CDN endpoint and parse results.
+    sos_url_override: if provided, use this URL instead of LIVE_ENDPOINT.
+    """
+    url = sos_url_override.strip() if sos_url_override else LIVE_ENDPOINT
     try:
-        r = requests.get(LIVE_ENDPOINT, timeout=15)
+        r = requests.get(url, timeout=15)
         r.raise_for_status()
         data = r.json()
         df = _parse_sos_json(data)
         if df is not None and not df.empty:
-            return df, "SOS Live Feed"
-    except Exception as e:
+            label = "SOS Live Feed" if not sos_url_override else "SOS Live Feed (Custom URL)"
+            return df, label
+    except Exception:
         pass
     return None, ""
 
@@ -227,15 +231,18 @@ def _sample_data() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def get_results(uploaded_file=None) -> tuple:
+def get_results(uploaded_file=None, sos_url_override: str = '') -> tuple:
     """
     Main entry point called by app.py.
     Priority:
-      1. Manual Upload  — operator session preview only
-      2. SOS Live Feed  — automatic, all viewers
-      3. Google Sheets  — operator broadcast, all viewers
-      4. Local CSV      — results_live.csv
-      5. Sample Data    — demo mode
+      1. Manual Upload     — operator session preview only
+      2. SOS Live Feed     — automatic, shared by all viewers
+      3. Google Sheets     — operator broadcast channel, all viewers
+      4. Local CSV         — results_live.csv
+      5. Sample Data       — demo mode
+
+    sos_url_override: operator can paste a corrected SOS URL from the sidebar.
+                      Only affects their session — other viewers get broadcast sheet.
     Returns (results_df | None, source_label)
     """
     # 1. Manual upload (operator preview — this session only)
@@ -244,8 +251,8 @@ def get_results(uploaded_file=None) -> tuple:
         if df is not None:
             return df, "Manual Upload"
 
-    # 2. Live SOS feed (automatic — all viewers)
-    df, src = _fetch_live()
+    # 2. Live SOS feed (automatic — or operator custom URL)
+    df, src = _fetch_live(sos_url_override=sos_url_override)
     if df is not None:
         return df, src
 

@@ -303,6 +303,38 @@ def main():
                 st.caption("Enter county results → all viewers auto-update every 5 min.")
             else:
                 st.caption("Broadcast sheet not configured yet.")
+
+            st.markdown("---")
+            with st.expander("⚙️ SOS Endpoint — Election Night Fix"):
+                st.caption(
+                    "If the live SOS feed isn't connecting, paste the correct "
+                    "URL here. Get it from results.sos.ga.gov → Download Reports "
+                    "→ Media Export link."
+                )
+                default_url = "https://results.sos.ga.gov/cdn/results/Georgia/export-51926GeneralPrimary.json"
+                sos_override = st.text_area(
+                    "Custom SOS URL",
+                    value=st.session_state.get('sos_url_override', ''),
+                    placeholder=default_url,
+                    height=80,
+                    label_visibility="collapsed",
+                    key="sos_url_input",
+                )
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.button("✅ Apply URL", use_container_width=True):
+                        st.session_state['sos_url_override'] = sos_override.strip()
+                        st.rerun()
+                with col2:
+                    if st.button("❌ Clear / Reset", use_container_width=True):
+                        st.session_state['sos_url_override'] = ''
+                        st.rerun()
+                active = st.session_state.get('sos_url_override', '')
+                if active:
+                    st.success(f"⚡ Custom URL active")
+                    st.code(active, language=None)
+                else:
+                    st.info(f"🟢 Using default URL:\n`{default_url}`")
         else:
             uploaded = None   # viewers never get upload widget
 
@@ -367,7 +399,11 @@ and fires alerts automatically.
 
     # ── Load data ──
     bench_df = load_benchmark()
-    results_df, source = get_results(uploaded_file=uploaded if uploaded else None)
+    sos_override = st.session_state.get('sos_url_override', '') if is_op else ''
+    results_df, source = get_results(
+        uploaded_file=uploaded if uploaded else None,
+        sos_url_override=sos_override,
+    )
     cmd_df, summary = run_engine(bench_df, results_df)
 
     # ── Download buttons (need data first) ──
