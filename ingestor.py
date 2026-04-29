@@ -126,9 +126,14 @@ def _load_csv(path_or_file) -> tuple[pd.DataFrame | None, str]:
         required = {"County", "Strickland Votes", "Cowsert Votes"}
         if not required.issubset(df.columns):
             return None, ""
-        # Drop rows where County or vote columns are blank/NaN (e.g. Excel partial rows)
-        df = df.dropna(subset=list(required))
-        df = df[df['County'].str.strip() != '']
+        # Drop rows with no county name (blank/NaN rows from Excel)
+        # Zero vote counts are valid placeholders — they show as PENDING on the dashboard
+        df = df.dropna(subset=["County"])
+        df = df[df['County'].astype(str).str.strip() != '']
+        # Fill NaN vote columns with 0
+        for col in ["Strickland Votes", "Cowsert Votes", "Precincts Reporting", "Precincts Participating"]:
+            if col in df.columns:
+                df[col] = df[col].fillna(0)
         if df.empty:
             return None, ""
         return df, "Manual Upload"
