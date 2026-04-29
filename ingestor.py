@@ -25,6 +25,7 @@ import requests
 import pandas as pd
 import io
 import os
+import streamlit as st
 from datetime import datetime
 
 # ── Live endpoint ─────────────────────────────────────────────────────────────
@@ -32,6 +33,16 @@ LIVE_ENDPOINT = (
     "https://results.sos.ga.gov/cdn/results/Georgia/"
     "export-51926GeneralPrimary.json"
 )
+
+# ── Google Sheets broadcast channel ───────────────────────────────────────────
+# Loaded from secrets: .streamlit/secrets.toml or Streamlit Cloud Secrets panel
+# Format: https://docs.google.com/spreadsheets/d/{ID}/export?format=csv
+# No API key required — sheet must be set to "Anyone with link can view"
+def _get_gsheet_url():
+    try:
+        return st.secrets.get('GSHEET_URL', '')
+    except Exception:
+        return os.environ.get('GSHEET_URL', '')
 
 # Candidate name fragments to match (case-insensitive)
 # These match whatever the SOS uses on the ballot
@@ -114,7 +125,38 @@ def _fetch_live() -> tuple[pd.DataFrame | None, str]:
     return None, ""
 
 
-def _load_csv(path_or_file) -> tuple[pd.DataFrame | None, str]:
+def _fetch_gsheet() -> tuple:
+    """Fetch results from the shared Google Sheets broadcast channel.
+    All viewers pull from the same public sheet URL — true broadcast.
+    Only rows with actual votes entered (total > 0) are returned.
+    """
+    url = _get_gsheet_url()
+    if not url:
+        return None, ""
+    try:
+        r = requests.get(url, timeout=10)
+        r.raise_for_status()
+        df = pd.read_csv(io.StringIO(r.text))
+        required = {"County", "Strickland Votes", "Cowsert Votes"}
+        if not required.issubset(df.columns):
+            return None, ""
+        df = df.dropna(subset=["County"])
+        df = df[df['County'].astype(str).str.strip() != '']
+        for col in ["Strickland Votes", "Cowsert Votes",
+                    "Precincts Reporting", "Precincts Participating"]:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+        # Only use rows where votes have actually been entered
+        has_votes = (df["Strickland Votes"] + df["Cowsert Votes"]) > 0
+        df = df[has_votes]
+        if df.empty:
+            return None, ""
+        return df, "Broadcast Sheet"
+    except Exception:
+        return None, ""
+
+
+def _load_csv(path_or_file) -> tuple:
     """Load a results CSV — accepts a file path string or an uploaded file object."""
     try:
         if hasattr(path_or_file, "read"):
@@ -185,31 +227,41 @@ def _sample_data() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def get_results(uploaded_file=None) -> tuple[pd.DataFrame | None, str]:
+def get_results(uploaded_file=None) -> tuple:
     """
     Main entry point called by app.py.
-    Priority: Manual Upload → SOS Live Feed → Local results_live.csv → Sample Data
+    Priority:
+      1. Manual Upload  — operator session preview only
+      2. SOS Live Feed  — automatic, all viewers
+      3. Google Sheets  — operator broadcast, all viewers
+      4. Local CSV      — results_live.csv
+      5. Sample Data    — demo mode
     Returns (results_df | None, source_label)
     """
-    # 1. Manual upload (highest priority — operator override)
+    # 1. Manual upload (operator preview — this session only)
     if uploaded_file is not None:
         df, src = _load_csv(uploaded_file)
         if df is not None:
             return df, "Manual Upload"
 
-    # 2. Live SOS feed
+    # 2. Live SOS feed (automatic — all viewers)
     df, src = _fetch_live()
     if df is not None:
         return df, src
 
-    # 3. Local results_live.csv (mock simulator or pre-loaded results)
+    # 3. Google Sheets broadcast channel (operator-controlled — all viewers)
+    df, src = _fetch_gsheet()
+    if df is not None:
+        return df, src
+
+    # 4. Local results_live.csv
     local_csv = os.path.join(os.path.dirname(__file__), 'results_live.csv')
     if os.path.exists(local_csv):
         df, src = _load_csv(local_csv)
         if df is not None and not df.empty:
             return df, "Local File (results_live.csv)"
 
-    # 4. Sample data (demo / pre-election)
+    # 5. Sample data (demo / pre-election)
     return _sample_data(), "Sample Data (Demo)"
 
 

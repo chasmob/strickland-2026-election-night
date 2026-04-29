@@ -97,10 +97,11 @@ st.markdown("""
     display:inline-block; padding:3px 10px; border-radius:20px;
     font-size:0.72rem; font-weight:700; letter-spacing:0.8px;
   }
-  .source-live    { background:#10B98133; color:#10B981; border:1px solid #10B981; }
-  .source-manual  { background:#F59E0B33; color:#F59E0B; border:1px solid #F59E0B; }
-  .source-sample  { background:#6B728033; color:#94A3B8; border:1px solid #6B7280; }
-  .source-nodata  { background:#DC262633; color:#DC2626; border:1px solid #DC2626; }
+  .source-live      { background:#10B98133; color:#10B981; border:1px solid #10B981; }
+  .source-manual    { background:#F59E0B33; color:#F59E0B; border:1px solid #F59E0B; }
+  .source-broadcast { background:#6366F133; color:#818CF8; border:1px solid #6366F1; }
+  .source-sample    { background:#6B728033; color:#94A3B8; border:1px solid #6B7280; }
+  .source-nodata    { background:#DC262633; color:#DC2626; border:1px solid #DC2626; }
 
   /* Section headings */
   .section-head {
@@ -219,8 +220,12 @@ def alert_row_html(row):
 </div>"""
 
 def source_badge(source):
-    cls = {'SOS Live Feed':'source-live','Manual Upload':'source-manual',
-           'Sample Data (Demo)':'source-sample'}.get(source,'source-nodata')
+    cls = {
+        'SOS Live Feed':    'source-live',
+        'Manual Upload':    'source-manual',
+        'Broadcast Sheet':  'source-broadcast',
+        'Sample Data (Demo)': 'source-sample',
+    }.get(source, 'source-nodata')
     return f'<span class="source-badge {cls}">{source}</span>'
 
 def style_table(df):
@@ -275,9 +280,29 @@ def main():
         if is_op:
             st.markdown("---")
             st.markdown("**📁 Manual Upload**")
-            st.caption("Upload a results CSV to override all other sources.")
+            st.caption("Upload a CSV to preview in your session only.")
             uploaded = st.file_uploader("", type=['csv'], label_visibility="collapsed",
                                         key="upload")
+
+            st.markdown("---")
+            st.markdown("**📡 Broadcast Channel**")
+            st.caption("Type results here to update ALL viewers instantly.")
+            _edit_url = os.environ.get('GSHEET_EDIT_URL', '') or ''
+            try:
+                _edit_url = st.secrets.get('GSHEET_EDIT_URL', '')
+            except Exception:
+                pass
+            if _edit_url:
+                st.markdown(f'<a href="{_edit_url}" target="_blank" style="'
+                            'display:block;background:#6366F122;border:1px solid #6366F1;'
+                            'border-radius:6px;padding:8px 12px;color:#818CF8;'
+                            'font-weight:700;font-size:0.82rem;text-decoration:none;'
+                            'text-align:center;">'
+                            '📊 Open Broadcast Sheet↗️</a>',
+                            unsafe_allow_html=True)
+                st.caption("Enter county results → all viewers auto-update every 5 min.")
+            else:
+                st.caption("Broadcast sheet not configured yet.")
         else:
             uploaded = None   # viewers never get upload widget
 
