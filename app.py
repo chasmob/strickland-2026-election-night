@@ -20,16 +20,19 @@ from engine_core import load_benchmark, run_engine, ALERT_COLORS, ALERT_PRIORITY
 from ingestor import get_results, get_empty_template
 
 
-# Password — reads from Streamlit secrets first, then env var, then placeholder
-# Local:  set in .streamlit/secrets.toml
-# Cloud:  set in Streamlit Community Cloud → App settings → Secrets
-def _get_password():
+# ── Passwords — loaded from secrets only, never hard-coded ───────────────────
+# Local:  .streamlit/secrets.toml  (gitignored)
+# Cloud:  Streamlit Community Cloud → App settings → Secrets
+def _get_passwords():
     try:
-        return st.secrets['APP_PASSWORD']
+        viewer_pw   = st.secrets.get('APP_PASSWORD', '')
+        operator_pw = st.secrets.get('OPERATOR_PASSWORD', '')
     except Exception:
-        return os.environ.get('APP_PASSWORD', 'ChangeMeBeforeLaunch')
+        viewer_pw   = os.environ.get('APP_PASSWORD', '')
+        operator_pw = os.environ.get('OPERATOR_PASSWORD', '')
+    return viewer_pw, operator_pw
 
-APP_PASSWORD = _get_password()
+VIEWER_PASSWORD, OPERATOR_PASSWORD = _get_passwords()
 
 
 # ── Global CSS ────────────────────────────────────────────────────────────────
@@ -152,8 +155,13 @@ def check_password():
         pwd = st.text_input("Password", type="password", label_visibility="collapsed",
                             placeholder="Enter password")
         if st.button("Enter Command Center", use_container_width=True):
-            if pwd == APP_PASSWORD:
+            if OPERATOR_PASSWORD and pwd == OPERATOR_PASSWORD:
                 st.session_state.authenticated = True
+                st.session_state.is_operator   = True
+                st.rerun()
+            elif VIEWER_PASSWORD and pwd == VIEWER_PASSWORD:
+                st.session_state.authenticated = True
+                st.session_state.is_operator   = False
                 st.rerun()
             else:
                 st.error("Incorrect password.")
@@ -224,28 +232,54 @@ def style_table(df):
 
 # ── Main App ──────────────────────────────────────────────────────────────────
 def main():
+    is_op = st.session_state.get('is_operator', False)
+
     # ── Sidebar ──
     with st.sidebar:
-        st.markdown("### ⚡ COMMAND CENTER")
+        # Role badge
+        if is_op:
+            st.markdown(
+                '<div style="background:#C9A84C22;border:1px solid #C9A84C;'
+                'border-radius:6px;padding:6px 12px;text-align:center;'
+                'font-size:0.75rem;font-weight:700;color:#C9A84C;letter-spacing:1px;">'
+                '⚡ OPERATOR MODE</div>', unsafe_allow_html=True)
+        else:
+            st.markdown(
+                '<div style="background:#1E2A3A;border:1px solid #30363D;'
+                'border-radius:6px;padding:6px 12px;text-align:center;'
+                'font-size:0.75rem;font-weight:700;color:#94A3B8;letter-spacing:1px;">'
+                '👁 VIEW ONLY</div>', unsafe_allow_html=True)
         st.markdown("---")
 
-        # Auto-refresh
-        auto_on = st.toggle("🔄 Auto-Refresh", value=True)
-        if auto_on:
-            interval_min = st.slider("Interval (minutes)", min_value=2, max_value=10,
-                                     value=5, step=1, key="interval_slider")
-            if HAS_AUTOREFRESH:
-                st_autorefresh(interval=interval_min * 60_000, key="autorefresh")
+        # Auto-refresh — everyone gets this
+        if HAS_AUTOREFRESH:
+            if is_op:
+                auto_on = st.toggle("🔄 Auto-Refresh", value=True)
+                if auto_on:
+                    interval_min = st.slider("Interval (minutes)", min_value=2, max_value=10,
+                                             value=5, step=1, key="interval_slider")
+                    st_autorefresh(interval=interval_min * 60_000, key="autorefresh")
             else:
-                st.caption("Install streamlit-autorefresh for live polling.")
-        if st.button("⚡ Refresh Now", use_container_width=True):
-            st.rerun()
+                # Viewers get fixed 5-min auto-refresh, no controls to adjust
+                st_autorefresh(interval=5 * 60_000, key="autorefresh")
+                st.caption("🔄 Auto-refreshing every 5 minutes")
+        else:
+            st.caption("Auto-refresh not available.")
 
-        st.markdown("---")
-        st.markdown("**📁 Manual Upload**")
-        st.caption("Upload a results CSV to override all other sources.")
-        uploaded = st.file_uploader("", type=['csv'], label_visibility="collapsed",
-                                    key="upload")
+        # Operator-only: manual refresh button
+        if is_op:
+            if st.button("⚡ Refresh Now", use_container_width=True):
+                st.rerun()
+
+        # Operator-only: manual CSV upload
+        if is_op:
+            st.markdown("---")
+            st.markdown("**📁 Manual Upload**")
+            st.caption("Upload a results CSV to override all other sources.")
+            uploaded = st.file_uploader("", type=['csv'], label_visibility="collapsed",
+                                        key="upload")
+        else:
+            uploaded = None   # viewers never get upload widget
 
         st.markdown("---")
         st.markdown("**⬇️ Downloads**")
@@ -303,6 +337,7 @@ and fires alerts automatically.
         st.markdown("---")
         if st.button("🔒 Logout"):
             st.session_state.authenticated = False
+            st.session_state.is_operator   = False
             st.rerun()
 
     # ── Load data ──
