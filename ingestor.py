@@ -126,6 +126,11 @@ def _load_csv(path_or_file) -> tuple[pd.DataFrame | None, str]:
         required = {"County", "Strickland Votes", "Cowsert Votes"}
         if not required.issubset(df.columns):
             return None, ""
+        # Drop rows where County or vote columns are blank/NaN (e.g. Excel partial rows)
+        df = df.dropna(subset=list(required))
+        df = df[df['County'].str.strip() != '']
+        if df.empty:
+            return None, ""
         return df, "Manual Upload"
     except Exception:
         return None, ""

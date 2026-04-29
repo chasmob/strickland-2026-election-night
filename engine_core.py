@@ -10,6 +10,18 @@ ALERT_COLORS   = {
 }
 KEY_COUNT = 12   # Show top N counties by expected turnout as "key" counties
 
+def _safe_int(val, default=0):
+    """Convert a value to int safely, handling NaN, None, and empty strings."""
+    try:
+        if pd.isna(val):
+            return default
+    except (TypeError, ValueError):
+        pass
+    try:
+        return int(float(val))
+    except (TypeError, ValueError):
+        return default
+
 def find_benchmark():
     candidates = [
         os.path.join(os.path.dirname(__file__), 'County_Benchmark_Model.csv'),
@@ -45,11 +57,11 @@ def run_engine(bench_df, results_df):
     for _, b in bench_df.iterrows():
         county = b['County']
         r      = res.get(county, {})
-        str_v  = int(r.get('Strickland Votes', 0) or 0)
-        cow_v  = int(r.get('Cowsert Votes', 0) or 0)
+        str_v  = _safe_int(r.get('Strickland Votes', 0))
+        cow_v  = _safe_int(r.get('Cowsert Votes', 0))
         tot_r  = str_v + cow_v   # derive total from candidate votes
-        prec_r = int(r.get('Precincts Reporting', 0) or 0)
-        prec_t = max(int(r.get('Precincts Participating', 1) or 1), 1)
+        prec_r = _safe_int(r.get('Precincts Reporting', 0))
+        prec_t = max(_safe_int(r.get('Precincts Participating', 1), 1), 1)
 
         has     = tot_r > 0
         act_pct = str_v/tot_r*100 if has else 0.0
