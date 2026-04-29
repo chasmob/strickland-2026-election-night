@@ -249,7 +249,56 @@ def main():
 
         st.markdown("---")
         st.markdown("**⬇️ Downloads**")
-        col_a, col_b = st.columns(2)
+
+        # Download the full model brief (Word doc)
+        _docx_path = os.path.join(os.path.dirname(__file__), 'Strickland_2026_Election_Model.docx')
+        if os.path.exists(_docx_path):
+            with open(_docx_path, 'rb') as _f:
+                st.download_button(
+                    label="📄 Download Model Brief",
+                    data=_f.read(),
+                    file_name="Strickland_2026_Election_Model.docx",
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    use_container_width=True,
+                )
+
+        st.markdown("---")
+        with st.expander("ℹ️ About This Dashboard"):
+            st.markdown("""
+**Strickland AG 2026 — Election Night Command System**
+
+This dashboard answers one question in real time:
+*Is Strickland running ahead, behind, or on track — county by county?*
+
+---
+**How it works**
+
+Every county has a pre-calculated model target based on three years
+of Georgia Republican primary data (2022 SOS, 2022 Governor, 2024 Presidential).
+As results come in, the system compares actual votes to those targets
+and fires alerts automatically.
+
+---
+**Alert Key**
+- 🟣 **BREAKOUT** — Dramatically above target
+- 🟢 **AHEAD** — Beating the model
+- ✅ **ON MODEL** — Right on track
+- 🟡 **WATCH** — Slightly below target
+- 🔴 **BEHIND** — Significantly underperforming
+- ⬜ **PENDING** — No results yet
+
+---
+**Reading the numbers**
+
+- **Act%** — Strickland's actual vote share in that county
+- **Mdl%** — What the model predicted
+- **Dev** — Points above/below the model target
+- **Cushion** — Extra votes above the 50% threshold
+- **Precincts** — Reporting / Total (when equal, county is done)
+
+---
+*Download the full Model Brief above for complete methodology.*
+            """)
 
         st.markdown("---")
         if st.button("🔒 Logout"):
