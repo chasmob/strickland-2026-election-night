@@ -122,6 +122,16 @@ st.markdown("""
   .stDownloadButton>button { background:#0B1F3A; color:#C9A84C;
                               border:1px solid #C9A84C; border-radius:6px; }
   div[data-testid="stDataFrame"] { background:#161B22; border-radius:10px; }
+  /* ── Mobile responsive ───────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .cmd-header { flex-direction:column; gap:8px; padding:14px 16px; }
+    .cmd-title  { font-size:1.1rem; letter-spacing:1px; }
+    .cmd-ts     { text-align:left; }
+    .metric-value { font-size:1.8rem; }
+    .county-grid  { flex-direction:column; gap:8px; }
+    .county-card  { min-width:unset; flex:unset; }
+    .county-card-main { font-size:1.2rem; }
+  }
 </style>
 """, unsafe_allow_html=True)
 
@@ -375,9 +385,18 @@ def main():
         'Str Exp Mid':'Exp Mid', 'Turnout Mid':'Turn Mid',
     })
 
-    show_cols = ['County','ALERT','Act%','Mdl%','Dev','Cushion',
-                 'Str V','Cow V','Total','% Exp Rptd','Precincts','Floor %','Ceiling %',
-                 'Volatility','Adjustment']
+    # Mobile/compact view toggle
+    compact = st.checkbox(
+        "Compact View (mobile-friendly — shows key columns only)",
+        value=False, key="compact_view"
+    )
+
+    if compact:
+        show_cols = ['County', 'ALERT', 'Act%', 'Dev', 'Cushion', 'Precincts']
+    else:
+        show_cols = ['County','ALERT','Act%','Mdl%','Dev','Cushion',
+                     'Str V','Cow V','Total','% Exp Rptd','Precincts','Floor %','Ceiling %',
+                     'Volatility','Adjustment']
     show_cols = [c for c in show_cols if c in display_df.columns]
     tbl = display_df[show_cols].copy()
 
@@ -409,7 +428,7 @@ def main():
         hide_index=True,
     )
 
-    st.caption(f"Engine v1.0 · Model v2.5 · {summary['timestamp']} · "
+    st.caption(f"Engine v1.0 · Model v2.6 · {summary['timestamp']} · "
                f"Source: {source} · {rptd}/{total} counties")
 
 
