@@ -311,7 +311,7 @@ def main():
                     "URL here. Get it from results.sos.ga.gov → Download Reports "
                     "→ Media Export link."
                 )
-                default_url = "https://results.sos.ga.gov/cdn/results/Georgia/export-51926GeneralPrimary.json"
+                default_url = "https://results.sos.ga.gov/cdn/results/Georgia/export-GeneralPrimary51926.json"
                 sos_override = st.text_area(
                     "Custom SOS URL",
                     value=st.session_state.get('sos_url_override', ''),

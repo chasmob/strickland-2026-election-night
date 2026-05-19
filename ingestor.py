@@ -31,7 +31,7 @@ from datetime import datetime
 # ── Live endpoint ─────────────────────────────────────────────────────────────
 LIVE_ENDPOINT = (
     "https://results.sos.ga.gov/cdn/results/Georgia/"
-    "export-51926GeneralPrimary.json"
+    "export-GeneralPrimary51926.json"
 )
 
 # ── Google Sheets broadcast channel ───────────────────────────────────────────
